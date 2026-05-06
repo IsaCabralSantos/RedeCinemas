@@ -1,0 +1,36 @@
+@startuml
+title Diagrama de Atividade - Cadastro de Sessão
+
+start
+:Administrador escolhe cadastrar sessão;
+:Sistema lista cinemas disponíveis;
+:Administrador seleciona cinema;
+:Sistema lista filmes disponíveis;
+:Administrador seleciona filme;
+:Administrador informa data e hora;
+
+if (Sessão válida?) then (Não)
+  :Sistema exibe erro de validação;
+  stop
+else (Sim)
+  if (Intervalo 15min respeitado?) then (Não)
+    :Sistema exibe erro de intervalo;
+    stop
+  else (Sim)
+    if (Filme existe?) then (Não)
+      :Sistema exibe erro;
+      stop
+    else (Sim)
+      if (Cinema existe?) then (Não)
+        :Sistema exibe erro;
+        stop
+      else (Sim)
+        :Sistema salva sessão no banco;
+        :Sistema exibe mensagem de sucesso;
+        stop
+      endif
+    endif
+  endif
+endif
+
+@enduml
