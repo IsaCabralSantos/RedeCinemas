@@ -33,11 +33,7 @@ atvd06-05/
 ├── docs/               
 │   ├── RF.md             
 │   └── RN.md            
-├── diagramas/            
-│   ├── casosDeUso.puml
-│   ├── diagramaDeClasses.puml
-│   ├── atividadeCadastroSessao.puml
-│   └── sequenciaCadastroSessao.puml
+│
 └── cinema.db            
 ```
 
